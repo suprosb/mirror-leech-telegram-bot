@@ -99,12 +99,14 @@ async def get_buttons(key=None, edit_type=None):
                 "SUDO_USERS",
                 "CMD_SUFFIX",
                 "OWNER_ID",
+                "BOT_PM",
                 "USER_SESSION_STRING",
                 "TELEGRAM_HASH",
                 "TELEGRAM_API",
                 "AUTHORIZED_CHATS",
                 "BOT_TOKEN",
                 "DOWNLOAD_DIR",
+            
             ]:
                 msg += "Restart required for this edit to take effect!\n\n"
             msg += f"Send a valid value for {key}. Current value is '{config_dict[key]}'. Timeout: 60 sec"
