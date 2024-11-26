@@ -1003,6 +1003,9 @@ async def load_config():
         JD_EMAIL = ""
         JD_PASS = ""
 
+    BOT_PM = environ.get("BOT_PM", "")
+    BOT_PM = BOT_PM.lower() == "true"
+    
     USENET_SERVERS = environ.get("USENET_SERVERS", "")
     try:
         if len(USENET_SERVERS) == 0:
@@ -1244,6 +1247,7 @@ async def load_config():
             "IS_TEAM_DRIVE": IS_TEAM_DRIVE,
             "JD_EMAIL": JD_EMAIL,
             "JD_PASS": JD_PASS,
+            "BOT_PM": BOT_PM,
             "LEECH_DUMP_CHAT": LEECH_DUMP_CHAT,
             "LEECH_FILENAME_PREFIX": LEECH_FILENAME_PREFIX,
             "LEECH_SPLIT_SIZE": LEECH_SPLIT_SIZE,
